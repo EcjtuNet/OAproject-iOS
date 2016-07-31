@@ -18,6 +18,7 @@ class CustomPresentationController: UIPresentationController {
     }
     
     override func containerViewWillLayoutSubviews() {
+    
         
         if prensentFrame == CGRectZero {
             presentedView()?.frame = CGRect(x: 0, y: 0, width: 100, height: UIScreen.mainScreen().bounds.height)

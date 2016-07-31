@@ -22,8 +22,9 @@ class MainTabViewController: UITabBarController {
     var animation:ToolsViewAnimation?
     
     func composeButtonDidClick(sender:UIButton) {
-        sender.selected = !sender.selected
         
+        sender.selected = !sender.selected
+
         let toolsViewController = ToolsViewController()
         animation = ToolsViewAnimation(composeButton: sender)
         toolsViewController.transitioningDelegate = animation
@@ -42,6 +43,7 @@ class MainTabViewController: UITabBarController {
         
     }
     
+    //添加子ViewController
     private func addChildViewControllers() {
         let homeViewController = HomeViewController()
         self.addChildViewController(homeViewController,imageName: "tabbar_home")
@@ -54,17 +56,17 @@ class MainTabViewController: UITabBarController {
     }
     
     private func addChildViewController(childController: UIViewController,imageName:String) {
-        
+//        设置viewcontroller
         childController.tabBarItem.image = UIImage(named: imageName)
         childController.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
         childController.tabBarItem.selectedImage = UIImage(named: imageName + "_highlighted")
-        
+//        包装NavigationBar
         let nav = UINavigationController()
-        
         nav.addChildViewController(childController)
+        
         addChildViewController(nav)
     }
-    
+//    设置中间compose按钮属性
     private func setupComposeButton() {
         let buttonWidth = UIScreen.mainScreen().bounds.width / CGFloat((viewControllers?.count)!)
         composeButton.frame = CGRect(x: buttonWidth, y: 0, width: buttonWidth, height: 49)

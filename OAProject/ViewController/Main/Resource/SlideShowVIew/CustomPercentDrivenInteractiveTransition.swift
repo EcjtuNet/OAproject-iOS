@@ -14,7 +14,7 @@ class CustomPercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransi
     
     init(gesture:UIScreenEdgePanGestureRecognizer) {
         super.init()
-        gesture.addTarget(self, action: "gestureRecognizeDidUpdate:")
+        gesture.addTarget(self, action: #selector(CustomPercentDrivenInteractiveTransition.gestureRecognizeDidUpdate(_:)))
     }
     
     override func startInteractiveTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -23,7 +23,6 @@ class CustomPercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransi
     }
     
     func gestureRecognizeDidUpdate(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
-        print("asd")
         switch gestureRecognizer.state {
         case .Began: break
         case .Changed: self.updateInteractiveTransition(self.percentForGesture(gestureRecognizer))  //手势滑动，更新百分比
@@ -37,9 +36,14 @@ class CustomPercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransi
         default: self.cancelInteractiveTransition()
         }
     }
-    
+    /**
+     用于返回当前动画需要执行的百分比
+     @param:gesture 传入手势状态
+    */
     private func percentForGesture(gesture: UIScreenEdgePanGestureRecognizer) -> CGFloat {
+//        获取手指当前位置
         let fingerLocation = gesture.locationInView(transitionContext?.containerView())
+//        计算手指划过距离相对屏幕宽度的百分比
         let percent = fingerLocation.x/(transitionContext?.containerView()?.frame.width)!
         switch gesture.state {
         case .Began:break

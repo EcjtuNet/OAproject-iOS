@@ -9,7 +9,9 @@
 import UIKit
 
 class SlideViewAnimation: NSObject,UIViewControllerTransitioningDelegate,UIViewControllerAnimatedTransitioning {
+    //保存界面手势
     var gesture:UIScreenEdgePanGestureRecognizer? = nil
+    //记录当前状态
     var isPresent = true
     
     func presentationControllerForPresentedViewController(presented: UIViewController, presentingViewController presenting: UIViewController, sourceViewController source: UIViewController) -> UIPresentationController? {
@@ -23,36 +25,41 @@ class SlideViewAnimation: NSObject,UIViewControllerTransitioningDelegate,UIViewC
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         isPresent = false
+        print("22")
         return self
     }
     
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
-        return 2
+        return 1
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        //transitionContext.containerView()?.backgroundColor = UIColor.whiteColor()
+        transitionContext.containerView()?.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1.00)
         if isPresent {
             let toView = transitionContext.viewForKey(UITransitionContextToViewKey)
             let fromView = transitionContext.viewForKey(UITransitionContextFromViewKey)
             
             toView?.transform = CGAffineTransformMakeTranslation(-(toView?.frame.width)!, 0)
-            //fromView?.layer.anchorPoint = CGPoint(x:Contents.ScreenWidth/2, y: Contents.ScreenHeight/2)
+
             UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: { 
-                toView?.transform = CGAffineTransformMakeTranslation(100, 0)
-//                fromView?.transform = CGAffineTransformMakeTranslation(1000, Contents.ScreenHeight)
-//
-//                fromView?.transform = CGAffineTransformMakeTranslation((toView?.frame.width)!,0)
-                fromView?.transform = CGAffineTransformMakeScale(0.5, 0.5)
-                //fromView?.layer.transform = CATransform3DMakeRotation(CGFloat(M_PI), 0, 100, 0)
+                toView?.transform = CGAffineTransformMakeTranslation(0, 0)
+                
+
+                let fromViewtranslate = CGAffineTransformMakeTranslation(200, 0)
+                
+                fromView?.transform = CGAffineTransformScale(fromViewtranslate, 0.7, 0.7)
+
                 }, completion: nil)
             
             transitionContext.containerView()?.addSubview(toView!)
+            transitionContext.containerView()?.bringSubviewToFront(fromView!)
+        }else {
+            
         }
     }
     
-    func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return CustomPercentDrivenInteractiveTransition(gesture: gesture!)
-    }
+//    func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
+//        return CustomPercentDrivenInteractiveTransition(gesture: gesture!)
+//    }
 
 }

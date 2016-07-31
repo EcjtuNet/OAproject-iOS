@@ -11,6 +11,8 @@ import SnapKit
 
 class HomeViewController: UIViewController {
     
+    lazy var dropListAnimation = DropListAnimation()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
@@ -18,20 +20,43 @@ class HomeViewController: UIViewController {
         self.view.backgroundColor = UIColor.whiteColor()
         
         
-        print(navigationController)
+        print(UIScreen.mainScreen().bounds)
         
     }
     
     private func setupNavigationBar() {
+//        设置navagationbar背景色
         self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
-        
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_leftbar"), style: .Plain, target: self, action: "123")
+//        设置左右按钮
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_leftbar"), style: .Plain, target: self, action: #selector(HomeViewController.leftButtonDidClick(_:)))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_searchbar"), style: .Plain, target: self, action: "123")
-        
+//        设置标题按钮
         let titleBtn = TitleButton()
         titleBtn.setTitle("极客江南", forState: UIControlState.Normal)
-        titleBtn.addTarget(self, action: "titleBtnClick:", forControlEvents: UIControlEvents.TouchUpInside)
+        titleBtn.addTarget(self, action: #selector(HomeViewController.titleButtonDidClick), forControlEvents: UIControlEvents.TouchUpInside)
         navigationItem.titleView = titleBtn
+    }
+    var an:SlideViewAnimation?
+    func leftButtonDidClick(sender:UIButton) {
+        let base = SlideMenuViewController()
+        an = SlideViewAnimation()
+//        let gesture = UIScreenEdgePanGestureRecognizer(target: self, action: "asd")
+//        self.view.addGestureRecognizer(gesture)
+//        an?.gesture = gesture
+        base.transitioningDelegate = an
+        self.presentViewController(base, animated: true, completion: nil)
+    }
+    
+    func asd () {
+        
+    }
+    
+    func titleButtonDidClick() {
+        let vc = UIStoryboard(name: "DroplistView", bundle: nil).instantiateInitialViewController()
+        vc!.transitioningDelegate = dropListAnimation
+        vc!.modalPresentationStyle = .Custom
+        self.presentViewController(vc!, animated: true, completion: nil)
+        
     }
     
     private func setupSubviews() {

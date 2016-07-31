@@ -9,13 +9,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "OAProject/ViewController/Tools/ToolsViewAnimation.swift"
-            timestampString = "491592659.177701"
+            filePath = "OAProject/ViewController/Main/Resource/SlideShowVIew/SlideMenuView.swift"
+            timestampString = "491657651.682595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "animateTransition(_:)"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "closeButtonDidClick()"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

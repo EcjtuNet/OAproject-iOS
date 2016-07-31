@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Uuh-hs-GUH">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Droplist View Controller-->
+        <scene sceneID="xV9-xu-Ipt">
+            <objects>
+                <viewController id="Uuh-hs-GUH" customClass="DroplistViewController" customModule="OAProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gnV-7R-fKj"/>
+                        <viewControllerLayoutGuide type="bottom" id="SF2-6n-Fbd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hov-d6-4YU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_navbar_droplist_bg" translatesAutoresizingMaskIntoConstraints="NO" id="5z5-hB-y7e">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rPT-Rg-fD2">
+                                <rect key="frame" x="25" y="35" width="550" height="550"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rPT-Rg-fD2" firstAttribute="top" secondItem="gnV-7R-fKj" secondAttribute="bottom" constant="15" id="1eU-fE-h5V"/>
+                            <constraint firstItem="5z5-hB-y7e" firstAttribute="top" secondItem="gnV-7R-fKj" secondAttribute="bottom" id="63J-uY-PW3"/>
+                            <constraint firstItem="SF2-6n-Fbd" firstAttribute="top" secondItem="rPT-Rg-fD2" secondAttribute="bottom" constant="15" id="FJC-qd-wtF"/>
+                            <constraint firstAttribute="trailing" secondItem="rPT-Rg-fD2" secondAttribute="trailing" constant="25" id="Z6M-Ef-lYB"/>
+                            <constraint firstItem="SF2-6n-Fbd" firstAttribute="top" secondItem="5z5-hB-y7e" secondAttribute="bottom" id="hEP-ia-LRo"/>
+                            <constraint firstItem="rPT-Rg-fD2" firstAttribute="leading" secondItem="hov-d6-4YU" secondAttribute="leading" constant="25" id="lTu-sb-sc5"/>
+                            <constraint firstAttribute="trailing" secondItem="5z5-hB-y7e" secondAttribute="trailing" id="nVT-F1-CyB"/>
+                            <constraint firstItem="5z5-hB-y7e" firstAttribute="leading" secondItem="hov-d6-4YU" secondAttribute="leading" id="wk3-CE-8Wy"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TPi-rI-WvZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="221"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="home_navbar_droplist_bg" width="112" height="43"/>
+    </resources>
+</document>
