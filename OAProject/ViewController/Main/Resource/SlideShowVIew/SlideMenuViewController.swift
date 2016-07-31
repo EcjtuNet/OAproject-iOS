@@ -9,12 +9,13 @@
 import UIKit
 
 class SlideMenuViewController: UIViewController,SlideMenuDelegate {
+    var slideMenuView:SlideMenuView?
     
     override func loadView() {
         super.loadView()
         let slideMenuView = SlideMenuView()
         slideMenuView.delegate = self
-        view = SlideMenuView()
+        view = slideMenuView
         
     }
 
@@ -29,7 +30,6 @@ class SlideMenuViewController: UIViewController,SlideMenuDelegate {
     }
     
     func closeButtonDidClick() {
-        print("333")
         self.dismissViewControllerAnimated(true, completion: nil)
     }
 }

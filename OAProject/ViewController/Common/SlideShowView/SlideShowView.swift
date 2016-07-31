@@ -44,44 +44,51 @@ class SlideShowView: UIView {
         return view
     }()
     
-    lazy var indicator = UIView()
+    lazy var indicatorBackground:UIView = {
+        let view = UIView()
+        view.backgroundColor = self.indicatorBackgroundColor
+        return view
+    }()
+    
+    lazy var indicator:UIView = {
+        let view = UIView()
+        view.backgroundColor = UIColor(red:0.15, green:0.22, blue:0.24, alpha:1.00)
+        return view
+    }()
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.addSubview(indicatorBackground)
+        self.bringSubviewToFront(indicatorBackground)
+        self.addSubview(scrollView)
+        indicatorBackground.addSubview(indicator)
+
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+        
+    }
     
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         viewWidth = frame.width
         viewHeight = frame.height
         if let count = dataSource?.slideShowView(self) {
             numberOfItems = count
         }
         
-        setupSubViews()
-        print(frame)
-    }
-
-    
-    private func setupSubViews() {
+        indicatorBackground.frame = CGRect(x: 0, y: viewHeight!-indicatorHeight, width: viewWidth!, height: indicatorHeight)
         
         scrollView.contentSize = CGSize(width: viewWidth! * CGFloat(numberOfItems), height: self.frame.height)
         scrollView.frame = self.frame
-        self.addSubview(scrollView)
         
-        setupIndicator()
-    }
-    
-    private func setupIndicator() {
-//        设置指示器背景
-        let indicatorBackground = UIView()
-        indicatorBackground.backgroundColor = indicatorBackgroundColor
-        indicatorBackground.frame = CGRect(x: 0, y: viewHeight!-indicatorHeight, width: viewWidth!, height: indicatorHeight)
-        self.addSubview(indicatorBackground)
-        self.bringSubviewToFront(indicatorBackground)
-//        设置指示器
         let indicatorWidth = viewWidth! / CGFloat(numberOfItems)
         indicator.frame = CGRect(x: 0, y: 0, width: indicatorWidth, height: indicatorHeight)
-        indicator.backgroundColor = UIColor(red:0.15, green:0.22, blue:0.24, alpha:1.00)
-        indicatorBackground.addSubview(indicator)
     }
     
+//    设置每页要显示的图片
     private func setupDataSource() {
         for i in 0...numberOfItems {
             let imageView = UIImageView()

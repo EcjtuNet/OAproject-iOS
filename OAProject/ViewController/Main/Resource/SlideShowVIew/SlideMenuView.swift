@@ -115,8 +115,10 @@ class SlideMenuView: UIView {
     }
     
     func closeButtonDidClick() {
-        print("aa")
-        delegate!.closeButtonDidClick()
+
+        if delegate != nil {
+            delegate!.closeButtonDidClick()
+        }
     }
     
 }
