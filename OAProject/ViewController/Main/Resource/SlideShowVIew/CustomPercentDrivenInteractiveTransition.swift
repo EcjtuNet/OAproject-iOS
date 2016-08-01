@@ -57,6 +57,7 @@ class CustomPercentDrivenInteractiveTransition: UIPercentDrivenInteractiveTransi
         default:
             break
         }
+        print(fingerLocation.x/(transitionContext?.containerView()?.frame.width)!)
         return fingerLocation.x/(transitionContext?.containerView()?.frame.width)!
     }
 

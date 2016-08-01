@@ -9,18 +9,27 @@
 import UIKit
 import SnapKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
     
     lazy var dropListAnimation = DropListAnimation()
+    lazy var customTransitionDelegate: InteractivityTransitionDelegate = InteractivityTransitionDelegate()
+    
+    lazy var gesture:UIScreenEdgePanGestureRecognizer? = UIScreenEdgePanGestureRecognizer(target: self, action: "asd")
+    
+    lazy var slideMenuViewController:SlideMenuViewController = SlideMenuViewController()
+    
+    let bulletinBar = BulletinBar()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupSubviews()
         setupNavigationBar()
         self.view.backgroundColor = UIColor.whiteColor()
-        
-        
-        print(UIScreen.mainScreen().bounds)
+        gesture?.edges = .Left
+        customTransitionDelegate.targetEdge = .Left
+        self.view.addGestureRecognizer(gesture!)
+        customTransitionDelegate.gestureRecognizer = gesture
+        slideMenuViewController.transitioningDelegate = customTransitionDelegate
         
     }
     
@@ -28,7 +37,7 @@ class HomeViewController: UIViewController {
 //        设置navagationbar背景色
         self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
 //        设置左右按钮
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_leftbar"), style: .Plain, target: self, action: #selector(HomeViewController.leftButtonDidClick(_:)))
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_leftbar"), style: .Plain, target: self, action:#selector(HomeViewController.leftButtonDidClick))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_searchbar"), style: .Plain, target: self, action: "123")
 //        设置标题按钮
         let titleBtn = TitleButton()
@@ -37,19 +46,20 @@ class HomeViewController: UIViewController {
         navigationItem.titleView = titleBtn
     }
     var an:SlideViewAnimation?
-    func leftButtonDidClick(sender:UIButton) {
-        let base = SlideMenuViewController()
-        an = SlideViewAnimation()
-//        let gesture = UIScreenEdgePanGestureRecognizer(target: self, action: "asd")
-//        self.view.addGestureRecognizer(gesture)
-//        an?.gesture = gesture
-        base.transitioningDelegate = an
-        self.presentViewController(base, animated: true, completion: nil)
+    func leftButtonDidClick() {
+        if self.presentedViewController == nil {
+            self.presentViewController(slideMenuViewController, animated: true, completion: nil)
+        }
+
     }
     
     func asd () {
         
+//        an?.gesture = gesture
+        leftButtonDidClick()
     }
+    
+    let tableView = UITableView()
     
     func titleButtonDidClick() {
         let vc = UIStoryboard(name: "DroplistView", bundle: nil).instantiateInitialViewController()
@@ -69,7 +79,7 @@ class HomeViewController: UIViewController {
             make.height.equalTo(168)
         }
         
-        let bulletinBar = BulletinBar()
+        
         self.view.addSubview(bulletinBar)
         bulletinBar.snp_makeConstraints { (make) in
             make.height.equalTo(38)
@@ -78,7 +88,7 @@ class HomeViewController: UIViewController {
             make.right.equalTo(0)
         }
         
-        let tableView = UITableView()
+        
         self.view.addSubview(tableView)
         tableView.snp_makeConstraints { (make) in
             make.top.equalTo(bulletinBar.snp_bottom)
@@ -87,6 +97,12 @@ class HomeViewController: UIViewController {
             make.right.equalTo(0)
         }
     }
+    
+    func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+    
+    
     
     
     

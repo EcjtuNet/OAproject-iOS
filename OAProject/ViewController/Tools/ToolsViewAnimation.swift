@@ -46,7 +46,7 @@ class ToolsViewAnimation: NSObject,UIViewControllerTransitioningDelegate,UIViewC
             }) { (_) in
                 
         }
-        print(transitionContext.containerView())
+
         transitionContext.containerView()?.addSubview(toView!)
     }
 

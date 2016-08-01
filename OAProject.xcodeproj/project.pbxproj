@@ -37,6 +37,9 @@
 		C08C0FF71D4DAF5A00D71A91 /* DroplistView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08C0FF61D4DAF5A00D71A91 /* DroplistView.storyboard */; };
 		C08C0FFB1D4DFC4D00D71A91 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08C0FFA1D4DFC4D00D71A91 /* SlideMenuViewController.swift */; };
 		C08C0FFD1D4DFC8600D71A91 /* SlideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08C0FFC1D4DFC8600D71A91 /* SlideMenuView.swift */; };
+		C08C10171D4EF32D00D71A91 /* InteractivityTransitionAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08C10141D4EF32D00D71A91 /* InteractivityTransitionAnimator.swift */; };
+		C08C10181D4EF32D00D71A91 /* InteractivityTransitionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08C10151D4EF32D00D71A91 /* InteractivityTransitionDelegate.swift */; };
+		C08C10191D4EF32D00D71A91 /* TransitionInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08C10161D4EF32D00D71A91 /* TransitionInteractionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +97,9 @@
 		C08C0FF61D4DAF5A00D71A91 /* DroplistView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DroplistView.storyboard; sourceTree = "<group>"; };
 		C08C0FFA1D4DFC4D00D71A91 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
 		C08C0FFC1D4DFC8600D71A91 /* SlideMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuView.swift; sourceTree = "<group>"; };
+		C08C10141D4EF32D00D71A91 /* InteractivityTransitionAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InteractivityTransitionAnimator.swift; path = "../../../../../../MySampleCode/CustomTransition/CustomTransition-Swift/CustomTransition-Swift/Interactivity/InteractivityTransitionAnimator.swift"; sourceTree = "<group>"; };
+		C08C10151D4EF32D00D71A91 /* InteractivityTransitionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InteractivityTransitionDelegate.swift; path = "../../../../../../MySampleCode/CustomTransition/CustomTransition-Swift/CustomTransition-Swift/Interactivity/InteractivityTransitionDelegate.swift"; sourceTree = "<group>"; };
+		C08C10161D4EF32D00D71A91 /* TransitionInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransitionInteractionController.swift; path = "../../../../../../MySampleCode/CustomTransition/CustomTransition-Swift/CustomTransition-Swift/Interactivity/TransitionInteractionController.swift"; sourceTree = "<group>"; };
 		CC077A960568650E8BA24990 /* Pods-OAProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-OAProject/Pods-OAProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -278,6 +284,9 @@
 			isa = PBXGroup;
 			children = (
 				C08C0FD31D4DAA9E00D71A91 /* CustomPercentDrivenInteractiveTransition.swift */,
+				C08C10141D4EF32D00D71A91 /* InteractivityTransitionAnimator.swift */,
+				C08C10151D4EF32D00D71A91 /* InteractivityTransitionDelegate.swift */,
+				C08C10161D4EF32D00D71A91 /* TransitionInteractionController.swift */,
 				C08C0FD41D4DAA9E00D71A91 /* CustomPresentationController.swift */,
 				C08C0FD51D4DAA9E00D71A91 /* SlideViewAnimation.swift */,
 				C08C0FFA1D4DFC4D00D71A91 /* SlideMenuViewController.swift */,
@@ -490,15 +499,18 @@
 				C08C0FE31D4DAA9E00D71A91 /* TitleButton.swift in Sources */,
 				C08C0FDB1D4DAA9E00D71A91 /* BulletinBar.swift in Sources */,
 				C08C0FFB1D4DFC4D00D71A91 /* SlideMenuViewController.swift in Sources */,
+				C08C10171D4EF32D00D71A91 /* InteractivityTransitionAnimator.swift in Sources */,
 				C08C0FE91D4DAA9E00D71A91 /* DropListAnimation.swift in Sources */,
 				C08C0FE01D4DAA9E00D71A91 /* NotifyTableViewCell.swift in Sources */,
 				C08C0FDE1D4DAA9E00D71A91 /* MessageTableViewCell.swift in Sources */,
 				C08C0FE41D4DAA9E00D71A91 /* ContactTableViewController.swift in Sources */,
 				C08C0FF51D4DAB3E00D71A91 /* DropListPresentationController.swift in Sources */,
 				C08C0FEF1D4DAA9E00D71A91 /* ToolsViewAnimation.swift in Sources */,
+				C08C10191D4EF32D00D71A91 /* TransitionInteractionController.swift in Sources */,
 				C08C0FE81D4DAA9E00D71A91 /* MainTabViewController.swift in Sources */,
 				C08C0FED1D4DAA9E00D71A91 /* CustomPresentationController.swift in Sources */,
 				C08C0FEE1D4DAA9E00D71A91 /* SlideViewAnimation.swift in Sources */,
+				C08C10181D4EF32D00D71A91 /* InteractivityTransitionDelegate.swift in Sources */,
 				C08C0FEC1D4DAA9E00D71A91 /* CustomPercentDrivenInteractiveTransition.swift in Sources */,
 				C08C0FE61D4DAA9E00D71A91 /* HomeViewController.swift in Sources */,
 				C08C0FE21D4DAA9E00D71A91 /* SlideShowView.swift in Sources */,

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "35D153EA4AEFDE34B8BDD75335DF3881B88B338A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "054FA612D81390BCA914FF3E911AFB6ED941DB7C" : 0,
+    "35D153EA4AEFDE34B8BDD75335DF3881B88B338A" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "680D6B40-7FFA-4023-8B5D-506D65B47F6B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "054FA612D81390BCA914FF3E911AFB6ED941DB7C" : "MySampleCode\/",
+    "35D153EA4AEFDE34B8BDD75335DF3881B88B338A" : "OAproject-iOS\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "OAProject",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "OAProject.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/bestswifter\/MySampleCode.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "054FA612D81390BCA914FF3E911AFB6ED941DB7C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/EcjtuNet\/OAproject-iOS.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "35D153EA4AEFDE34B8BDD75335DF3881B88B338A"
+    }
+  ]
+}
