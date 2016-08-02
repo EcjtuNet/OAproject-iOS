@@ -9,9 +9,9 @@
 import UIKit
 
 class DroplistViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(self.view.frame)
     }
 }
 

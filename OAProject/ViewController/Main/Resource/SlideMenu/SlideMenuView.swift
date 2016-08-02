@@ -37,20 +37,16 @@ class SlideMenuView: UIView {
         return button
     }()
     
-    private lazy var logoutLabel:UILabel = {
-        let label = UILabel()
-        label.text = "LOG OUT"
-        label.textColor = UIColor(red:66.0/255, green:82.0/255, blue:85.0/255, alpha:1.00)
-        label.font = UIFont(name: "TrebuchetMS", size: 18)
-        return label
+    private lazy var logoutImageView:UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "leftbar_font_logout")
+        return imageView
     }()
     
-    private lazy var menuLabel:UILabel = {
-        let label = UILabel()
-        label.text = "MENU"
-        label.textColor = UIColor(red:66.0/255, green:82.0/255, blue:85.0/255, alpha:1.00)
-        label.font = UIFont(name: "TrebuchetMS", size: 18)
-        return label
+    private lazy var menuImageView:UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "leftbar_font_menu")
+        return imageView
     }()
     
     private lazy var avatarImageView:UIImageView = {
@@ -103,9 +99,9 @@ class SlideMenuView: UIView {
         self.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1.00)
         
         self.addSubview(closeButton)
-        self.addSubview(menuLabel)
+        self.addSubview(logoutImageView)
         self.addSubview(logoutButton)
-        self.addSubview(logoutLabel)
+        self.addSubview(menuImageView)
         self.addSubview(menuTableView)
         self.addSubview(avatarImageView)
         addSubview(profileSettingImageView)
@@ -123,7 +119,7 @@ class SlideMenuView: UIView {
             make.left.equalTo(15)
         }
         
-        menuLabel.snp_makeConstraints { (make) in
+        menuImageView.snp_makeConstraints { (make) in
             make.centerY.equalTo(closeButton.snp_centerY)
             make.left.equalTo(closeButton.snp_right).offset(15)
         }
@@ -134,7 +130,7 @@ class SlideMenuView: UIView {
             make.width.height.equalTo(34)
         }
         
-        logoutLabel.snp_makeConstraints { (make) in
+        logoutImageView.snp_makeConstraints { (make) in
             make.centerY.equalTo(logoutButton.snp_centerY)
             make.left.equalTo(logoutButton.snp_right).offset(15)
         }

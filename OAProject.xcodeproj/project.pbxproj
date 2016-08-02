@@ -38,10 +38,13 @@
 		C08C0FF11D4DAA9E00D71A91 /* Constents.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08C0FDA1D4DAA9E00D71A91 /* Constents.swift */; };
 		C08C0FF51D4DAB3E00D71A91 /* DropListPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08C0FF41D4DAB3E00D71A91 /* DropListPresentationController.swift */; };
 		C08C0FF71D4DAF5A00D71A91 /* DroplistView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C08C0FF61D4DAF5A00D71A91 /* DroplistView.storyboard */; };
-		C0B8347B1D504CE400D3846F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8347A1D504CE400D3846F /* DetailViewController.swift */; };
-		C0B8347D1D504D1100D3846F /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0B8347C1D504D1100D3846F /* DetailView.xib */; };
 		C0B834811D504E8B00D3846F /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B834801D504E8B00D3846F /* HomeView.swift */; };
 		C0B834831D5056F600D3846F /* DroplistView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0B834821D5056F600D3846F /* DroplistView.xib */; };
+		C0C8BE581D50F52F005B944E /* DetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0C8BE541D50F52F005B944E /* DetailView.xib */; };
+		C0C8BE591D50F52F005B944E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8BE551D50F52F005B944E /* DetailViewController.swift */; };
+		C0C8BE5A1D50F52F005B944E /* DetailViewAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8BE561D50F52F005B944E /* DetailViewAnimation.swift */; };
+		C0C8BE5B1D50F52F005B944E /* DetailViewPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C8BE571D50F52F005B944E /* DetailViewPresentationController.swift */; };
+		C0C8BE5D1D50F8BB005B944E /* DetailView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0C8BE5C1D50F8BB005B944E /* DetailView.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,10 +103,13 @@
 		C08C0FDA1D4DAA9E00D71A91 /* Constents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constents.swift; sourceTree = "<group>"; };
 		C08C0FF41D4DAB3E00D71A91 /* DropListPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropListPresentationController.swift; sourceTree = "<group>"; };
 		C08C0FF61D4DAF5A00D71A91 /* DroplistView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DroplistView.storyboard; sourceTree = "<group>"; };
-		C0B8347A1D504CE400D3846F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		C0B8347C1D504D1100D3846F /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
 		C0B834801D504E8B00D3846F /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C0B834821D5056F600D3846F /* DroplistView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DroplistView.xib; sourceTree = "<group>"; };
+		C0C8BE541D50F52F005B944E /* DetailView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailView.xib; sourceTree = "<group>"; };
+		C0C8BE551D50F52F005B944E /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C0C8BE561D50F52F005B944E /* DetailViewAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewAnimation.swift; sourceTree = "<group>"; };
+		C0C8BE571D50F52F005B944E /* DetailViewPresentationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewPresentationController.swift; sourceTree = "<group>"; };
+		C0C8BE5C1D50F8BB005B944E /* DetailView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailView.storyboard; sourceTree = "<group>"; };
 		CC077A960568650E8BA24990 /* Pods-OAProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OAProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-OAProject/Pods-OAProject.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -255,7 +261,7 @@
 		C08C0FC61D4DAA9E00D71A91 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				C0B834791D504CAF00D3846F /* DetailView */,
+				C0C8BE531D50F52F005B944E /* DetailView */,
 				C08C0FC81D4DAA9E00D71A91 /* HomeViewController.swift */,
 				C0B834801D504E8B00D3846F /* HomeView.swift */,
 			);
@@ -317,14 +323,16 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		C0B834791D504CAF00D3846F /* DetailView */ = {
+		C0C8BE531D50F52F005B944E /* DetailView */ = {
 			isa = PBXGroup;
 			children = (
-				C0B8347A1D504CE400D3846F /* DetailViewController.swift */,
-				C0B8347C1D504D1100D3846F /* DetailView.xib */,
+				C0C8BE541D50F52F005B944E /* DetailView.xib */,
+				C0C8BE551D50F52F005B944E /* DetailViewController.swift */,
+				C0C8BE5C1D50F8BB005B944E /* DetailView.storyboard */,
+				C0C8BE561D50F52F005B944E /* DetailViewAnimation.swift */,
+				C0C8BE571D50F52F005B944E /* DetailViewPresentationController.swift */,
 			);
-			name = DetailView;
-			path = InfoView;
+			path = DetailView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -436,8 +444,9 @@
 			files = (
 				C08C0FF71D4DAF5A00D71A91 /* DroplistView.storyboard in Resources */,
 				C0B834831D5056F600D3846F /* DroplistView.xib in Resources */,
+				C0C8BE5D1D50F8BB005B944E /* DetailView.storyboard in Resources */,
 				C08C0FE11D4DAA9E00D71A91 /* NotifyTableViewCell.xib in Resources */,
-				C0B8347D1D504D1100D3846F /* DetailView.xib in Resources */,
+				C0C8BE581D50F52F005B944E /* DetailView.xib in Resources */,
 				C0623F591D49CD92001579CD /* Assets.xcassets in Resources */,
 				C08C0FDF1D4DAA9E00D71A91 /* MessageTableViewCell.xib in Resources */,
 			);
@@ -512,11 +521,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0C8BE5B1D50F52F005B944E /* DetailViewPresentationController.swift in Sources */,
+				C0C8BE5A1D50F52F005B944E /* DetailViewAnimation.swift in Sources */,
 				C08C0FE31D4DAA9E00D71A91 /* TitleButton.swift in Sources */,
 				C08C0FDB1D4DAA9E00D71A91 /* BulletinBar.swift in Sources */,
 				C01407B71D4F48A5007709D9 /* CustomPresentationController.swift in Sources */,
 				C08C0FE91D4DAA9E00D71A91 /* DropListAnimation.swift in Sources */,
-				C0B8347B1D504CE400D3846F /* DetailViewController.swift in Sources */,
 				C08C0FE01D4DAA9E00D71A91 /* NotifyTableViewCell.swift in Sources */,
 				C08C0FDE1D4DAA9E00D71A91 /* MessageTableViewCell.swift in Sources */,
 				C01407BC1D4F48A5007709D9 /* TransitionInteractionController.swift in Sources */,
@@ -526,6 +536,7 @@
 				C01407B91D4F48A5007709D9 /* InteractivityTransitionDelegate.swift in Sources */,
 				C08C0FE81D4DAA9E00D71A91 /* MainTabViewController.swift in Sources */,
 				C01407BE1D4F4A3E007709D9 /* CustomSegmentControl.swift in Sources */,
+				C0C8BE591D50F52F005B944E /* DetailViewController.swift in Sources */,
 				C08C0FE61D4DAA9E00D71A91 /* HomeViewController.swift in Sources */,
 				C0B834811D504E8B00D3846F /* HomeView.swift in Sources */,
 				C01407B81D4F48A5007709D9 /* InteractivityTransitionAnimator.swift in Sources */,

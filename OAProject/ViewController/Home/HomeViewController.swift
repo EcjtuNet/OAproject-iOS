@@ -11,6 +11,8 @@ import SnapKit
 
 class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
     
+    private lazy var animation = DetailViewAnimation()
+    
     private lazy var dropListAnimation = DropListAnimation()
     
     private lazy var customTransitionDelegate: InteractivityTransitionDelegate = InteractivityTransitionDelegate()
@@ -55,7 +57,9 @@ class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     
     func rightButtonDidClick() {
-        let vc = DetailViewController()
+        let vc = UIStoryboard(name: "DetailView", bundle: nil).instantiateInitialViewController()!
+        vc.transitioningDelegate = animation
+        vc.modalPresentationStyle = UIModalPresentationStyle.Custom
         presentViewController(vc, animated: true, completion: nil)
     }
     
@@ -66,6 +70,7 @@ class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
     
     func titleButtonDidClick() {
         let vc = UIStoryboard(name: "DroplistView", bundle: nil).instantiateInitialViewController()
+//        let vc = DroplistViewController()
         vc!.transitioningDelegate = dropListAnimation
         vc!.modalPresentationStyle = .Custom
         self.presentViewController(vc!, animated: true, completion: nil)
