@@ -24,9 +24,9 @@ class ContactTableViewController: UITableViewController {
         //navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_leftbar"), style: .Plain, target: self, action: "123")
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "contact_message_navbar_add"), style: .Plain, target: self, action: "123")
         
-//        let segement = UISegmentedControl()
-//
-//        navigationItem.titleView = segement
+        let titleView = CustomSegmentControl()
+        titleView.setSegmentTitle("消息",rightTitle: "联系人")
+        navigationItem.titleView = titleView
     }
 
     // MARK: - Table view data source

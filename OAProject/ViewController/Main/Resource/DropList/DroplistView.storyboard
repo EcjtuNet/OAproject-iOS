@@ -27,13 +27,13 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="rPT-Rg-fD2" firstAttribute="top" secondItem="gnV-7R-fKj" secondAttribute="bottom" constant="15" id="1eU-fE-h5V"/>
-                            <constraint firstItem="5z5-hB-y7e" firstAttribute="top" secondItem="gnV-7R-fKj" secondAttribute="bottom" id="63J-uY-PW3"/>
-                            <constraint firstItem="SF2-6n-Fbd" firstAttribute="top" secondItem="rPT-Rg-fD2" secondAttribute="bottom" constant="15" id="FJC-qd-wtF"/>
+                            <constraint firstItem="5z5-hB-y7e" firstAttribute="top" secondItem="gnV-7R-fKj" secondAttribute="bottom" id="0LI-jy-hPL"/>
+                            <constraint firstItem="rPT-Rg-fD2" firstAttribute="top" secondItem="gnV-7R-fKj" secondAttribute="bottom" constant="15" id="8jZ-8c-zlF"/>
                             <constraint firstAttribute="trailing" secondItem="rPT-Rg-fD2" secondAttribute="trailing" constant="25" id="Z6M-Ef-lYB"/>
-                            <constraint firstItem="SF2-6n-Fbd" firstAttribute="top" secondItem="5z5-hB-y7e" secondAttribute="bottom" id="hEP-ia-LRo"/>
+                            <constraint firstItem="SF2-6n-Fbd" firstAttribute="top" secondItem="5z5-hB-y7e" secondAttribute="bottom" id="cyN-Ca-g3L"/>
                             <constraint firstItem="rPT-Rg-fD2" firstAttribute="leading" secondItem="hov-d6-4YU" secondAttribute="leading" constant="25" id="lTu-sb-sc5"/>
                             <constraint firstAttribute="trailing" secondItem="5z5-hB-y7e" secondAttribute="trailing" id="nVT-F1-CyB"/>
+                            <constraint firstItem="SF2-6n-Fbd" firstAttribute="top" secondItem="rPT-Rg-fD2" secondAttribute="bottom" constant="15" id="oNr-6q-kZ3"/>
                             <constraint firstItem="5z5-hB-y7e" firstAttribute="leading" secondItem="hov-d6-4YU" secondAttribute="leading" id="wk3-CE-8Wy"/>
                         </constraints>
                     </view>

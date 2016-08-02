@@ -11,22 +11,23 @@ import SnapKit
 
 class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
     
-    lazy var dropListAnimation = DropListAnimation()
-    lazy var customTransitionDelegate: InteractivityTransitionDelegate = InteractivityTransitionDelegate()
+    private lazy var dropListAnimation = DropListAnimation()
     
-    lazy var gesture:UIScreenEdgePanGestureRecognizer? = UIScreenEdgePanGestureRecognizer(target: self, action: "asd")
+    private lazy var customTransitionDelegate: InteractivityTransitionDelegate = InteractivityTransitionDelegate()
     
-    lazy var slideMenuViewController:SlideMenuViewController = SlideMenuViewController()
+    private lazy var gesture:UIScreenEdgePanGestureRecognizer? = UIScreenEdgePanGestureRecognizer(target: self, action: "asd")
     
-    let bulletinBar = BulletinBar()
+    private lazy var slideMenuViewController:SlideMenuViewController = SlideMenuViewController()
+    
+    override func loadView() {
+        view = HomeView()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupSubviews()
         setupNavigationBar()
-        self.view.backgroundColor = UIColor.whiteColor()
         gesture?.edges = .Left
-        customTransitionDelegate.targetEdge = .Left
         self.view.addGestureRecognizer(gesture!)
         customTransitionDelegate.gestureRecognizer = gesture
         slideMenuViewController.transitioningDelegate = customTransitionDelegate
@@ -38,14 +39,14 @@ class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
         self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
 //        设置左右按钮
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_leftbar"), style: .Plain, target: self, action:#selector(HomeViewController.leftButtonDidClick))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_searchbar"), style: .Plain, target: self, action: "123")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_searchbar"), style: .Plain, target: self, action:#selector(HomeViewController.rightButtonDidClick))
 //        设置标题按钮
         let titleBtn = TitleButton()
         titleBtn.setTitle("极客江南", forState: UIControlState.Normal)
         titleBtn.addTarget(self, action: #selector(HomeViewController.titleButtonDidClick), forControlEvents: UIControlEvents.TouchUpInside)
         navigationItem.titleView = titleBtn
     }
-    var an:SlideViewAnimation?
+
     func leftButtonDidClick() {
         if self.presentedViewController == nil {
             self.presentViewController(slideMenuViewController, animated: true, completion: nil)
@@ -53,58 +54,27 @@ class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
 
     }
     
-    func asd () {
-        
-//        an?.gesture = gesture
-        leftButtonDidClick()
+    func rightButtonDidClick() {
+        let vc = DetailViewController()
+        presentViewController(vc, animated: true, completion: nil)
     }
     
-    let tableView = UITableView()
+    func asd () {
+        
+        leftButtonDidClick()
+    }
     
     func titleButtonDidClick() {
         let vc = UIStoryboard(name: "DroplistView", bundle: nil).instantiateInitialViewController()
         vc!.transitioningDelegate = dropListAnimation
         vc!.modalPresentationStyle = .Custom
         self.presentViewController(vc!, animated: true, completion: nil)
-        
     }
     
-    private func setupSubviews() {
-        let slidShowView = SlideShowView()
-        self.view.addSubview(slidShowView)
-        slidShowView.snp_makeConstraints { (make) in
-            make.top.equalTo(64)
-            make.right.equalTo(0)
-            make.left.equalTo(0)
-            make.height.equalTo(168)
-        }
-        
-        
-        self.view.addSubview(bulletinBar)
-        bulletinBar.snp_makeConstraints { (make) in
-            make.height.equalTo(38)
-            make.top.equalTo(slidShowView.snp_bottom)
-            make.left.equalTo(0)
-            make.right.equalTo(0)
-        }
-        
-        
-        self.view.addSubview(tableView)
-        tableView.snp_makeConstraints { (make) in
-            make.top.equalTo(bulletinBar.snp_bottom)
-            make.bottom.equalTo(0)
-            make.left.equalTo(0)
-            make.right.equalTo(0)
-        }
-    }
     
     func gestureRecognizer(gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWithGestureRecognizer otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
-    
-    
-    
-    
     
 }
 

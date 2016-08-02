@@ -9,7 +9,10 @@
 import UIKit
 
 class DroplistViewController: UIViewController {
-
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        print(self.view.frame)
+    }
 }
 
 //MARK: TableView delegate&datasource

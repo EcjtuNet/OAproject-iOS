@@ -21,7 +21,7 @@ class DropListPresentationController: UIPresentationController {
         // 修改弹出视图的大小
         if presentFrame == CGRectZero{
             
-            presentedView()?.frame = CGRect(x: 100, y: 56, width: 200, height: 200)
+            presentedView()?.frame = CGRect(x: 100, y: 56, width: 200, height: 100)
         }else
         {
             presentedView()?.frame = presentFrame

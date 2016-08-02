@@ -10,13 +10,107 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "OAProject/ViewController/Main/Resource/SlideShowVIew/SlideMenuView.swift"
-            timestampString = "491670271.522303"
+            timestampString = "491734900.097572"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "closeButtonDidClick()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../MySampleCode/CustomTransition/CustomTransition-Swift/CustomTransition-Swift/Interactivity/InteractivityTransitionAnimator.swift"
+            timestampString = "491734760.94173"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "pushViewAnimation(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "OAProject/ViewController/Common/CustomSegmentControl.swift"
+            timestampString = "491806389.753722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "CustomSegmentControl"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OAProject.CustomSegmentControl.init (frame : __C.CGRect) -&gt; OAProject.CustomSegmentControl"
+                  moduleName = "OAProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Geetion/OAproject-iOS/OAProject/ViewController/Common/CustomSegmentControl.swift"
+                  timestampString = "491806389.768951"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "146">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OAProject.CustomSegmentControl.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;OAProject.CustomSegmentControl&gt;"
+                  moduleName = "OAProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Geetion/OAproject-iOS/OAProject/ViewController/Common/CustomSegmentControl.swift"
+                  timestampString = "491806389.772187"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OAProject.CustomSegmentControl.(selectedTitleColor in _13924B625FD78FC19CAA1B46ACBF92CD).getter : __ObjC.UIColor"
+                  moduleName = "OAProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Geetion/OAproject-iOS/OAProject/ViewController/Common/CustomSegmentControl.swift"
+                  timestampString = "491806389.77271"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "219">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "OAProject.CustomSegmentControl.(selectedTitleColor in _13924B625FD78FC19CAA1B46ACBF92CD).setter : __ObjC.UIColor"
+                  moduleName = "OAProject"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Geetion/OAproject-iOS/OAProject/ViewController/Common/CustomSegmentControl.swift"
+                  timestampString = "491806389.772909"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "65">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
