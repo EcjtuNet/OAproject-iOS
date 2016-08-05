@@ -21,7 +21,7 @@ class HomeView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = UIColor.whiteColor()
+        backgroundColor = UIColor.whiteColor()
         
         addSubview(slidShowView)
         addSubview(tableView)

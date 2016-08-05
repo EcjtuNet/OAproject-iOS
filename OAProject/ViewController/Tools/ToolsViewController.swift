@@ -9,10 +9,27 @@
 import UIKit
 
 class ToolsViewController: UIViewController {
+    
+    private lazy var announceButton:ToolsButton = {
+        let button = ToolsButton()
+        button.setTitle("公告")
+        button.setImage(UIImage(named: "tools_announce")!)
+        button.sizeToFit()
+        return button
+    }()
+    
+    override func loadView() {
+        super.loadView()
+        view.addSubview(announceButton)
+        announceButton.snp_makeConstraints { (make) in
+            make.top.equalTo(100)
+            make.left.equalTo(100)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.whiteColor()
         // Do any additional setup after loading the view.
     }
 

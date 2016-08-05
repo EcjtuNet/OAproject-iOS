@@ -37,10 +37,11 @@ class ToolsViewAnimation: NSObject,UIViewControllerTransitioningDelegate,UIViewC
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         
         let window = UIApplication.sharedApplication().keyWindow
+        print(composeButton?.frame)
         window?.addSubview(composeButton!)
         
         let toView = transitionContext.viewForKey(UITransitionContextToViewKey)
-        toView?.transform = CGAffineTransformMakeTranslation(0, -1)
+        toView?.transform = CGAffineTransformMakeTranslation(0, (toView?.frame.height)!)
         UIView.animateWithDuration(transitionDuration(transitionContext), animations: { 
             toView?.transform = CGAffineTransformMakeTranslation(0, 0)
             }) { (_) in

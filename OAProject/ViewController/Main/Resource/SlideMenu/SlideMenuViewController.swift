@@ -30,6 +30,6 @@ class SlideMenuViewController: UIViewController,SlideMenuDelegate {
     }
     
     func closeButtonDidClick() {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

@@ -22,15 +22,15 @@ class InteractivityTransitionDelegate: NSObject, UIViewControllerTransitioningDe
     
     
 //    func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-//                print(self.gestureRecognizer)
-//        if let gestureRecognizer = self.gestureRecognizer {
+//                print(gestureRecognizer)
+//        if let gestureRecognizer = gestureRecognizer {
 //            return TransitionInteractionController(gestureRecognizer: gestureRecognizer, edgeForDragging: targetEdge)
 //        }
 //        return nil
 //    }
 //    
 //    func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-//        if let gestureRecognizer = self.gestureRecognizer {
+//        if let gestureRecognizer = gestureRecognizer {
 //            return TransitionInteractionController(gestureRecognizer: gestureRecognizer, edgeForDragging: targetEdge)
 //        }
 //        return nil

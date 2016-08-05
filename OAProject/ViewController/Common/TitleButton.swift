@@ -16,7 +16,7 @@ class TitleButton: UIButton {
         super.init(frame: frame)
         setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
         setImage(UIImage(named: "home_navbar_droplist"), forState: UIControlState.Normal)
-        self.sizeToFit()
+        sizeToFit()
         
     }
     
@@ -28,14 +28,7 @@ class TitleButton: UIButton {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
-        /*
-         print("-----------")
-         titleLabel?.frame.offsetInPlace(dx: -imageView!.bounds.width * 0.5, dy: 0)
-         imageView?.frame.offsetInPlace(dx: titleLabel!.bounds.width * 0.5 , dy: 0)
-         */
-        
-        // Swift中可以这样写
+
         titleLabel?.frame.origin.x = 0
         imageView?.frame.origin.x = titleLabel!.frame.size.width
     }

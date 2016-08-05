@@ -30,7 +30,7 @@ class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
         super.viewDidLoad()
         setupNavigationBar()
         gesture?.edges = .Left
-        self.view.addGestureRecognizer(gesture!)
+        view.addGestureRecognizer(gesture!)
         customTransitionDelegate.gestureRecognizer = gesture
         slideMenuViewController.transitioningDelegate = customTransitionDelegate
         
@@ -38,7 +38,7 @@ class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
     
     private func setupNavigationBar() {
 //        设置navagationbar背景色
-        self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
 //        设置左右按钮
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_leftbar"), style: .Plain, target: self, action:#selector(HomeViewController.leftButtonDidClick))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_searchbar"), style: .Plain, target: self, action:#selector(HomeViewController.rightButtonDidClick))
@@ -50,8 +50,8 @@ class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
     }
 
     func leftButtonDidClick() {
-        if self.presentedViewController == nil {
-            self.presentViewController(slideMenuViewController, animated: true, completion: nil)
+        if presentedViewController == nil {
+            presentViewController(slideMenuViewController, animated: true, completion: nil)
         }
 
     }
@@ -69,11 +69,11 @@ class HomeViewController: UIViewController,UIGestureRecognizerDelegate {
     }
     
     func titleButtonDidClick() {
-        let vc = UIStoryboard(name: "DroplistView", bundle: nil).instantiateInitialViewController()
+        let vc = UIStoryboard(name: "DroplistView", bundle: nil).instantiateInitialViewController()!
 //        let vc = DroplistViewController()
-        vc!.transitioningDelegate = dropListAnimation
-        vc!.modalPresentationStyle = .Custom
-        self.presentViewController(vc!, animated: true, completion: nil)
+        vc.transitioningDelegate = dropListAnimation
+        vc.modalPresentationStyle = .Custom
+        presentViewController(vc, animated: true, completion: nil)
     }
     
     

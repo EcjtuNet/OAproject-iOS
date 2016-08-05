@@ -12,14 +12,14 @@ class ContactTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
         setupNavigationBar()
     }
     
     private func setupNavigationBar() {
-        self.navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
+        navigationController?.navigationBar.barTintColor = UIColor.whiteColor()
         
         //navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "home_navbar_leftbar"), style: .Plain, target: self, action: "123")
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "contact_message_navbar_add"), style: .Plain, target: self, action: "123")

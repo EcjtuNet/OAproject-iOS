@@ -25,21 +25,32 @@ class BulletinBar: UIView {
     
     private lazy var bottomLine:UIView = {
         let view = UIView()
-        view.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.00) 
+        view.backgroundColor = UIColor(red:0.95, green:0.95, blue:0.95, alpha:1.00)
         return view
     }()
-
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        addSubview(bottomLine)
+        addSubview(decorationView)
+        addSubview(label)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func layoutSubviews() {
         
-        self.addSubview(bottomLine)
+        
         bottomLine.snp_makeConstraints { (make) in
             make.left.equalTo(0)
             make.right.equalTo(0)
             make.bottom.equalTo(0)
             make.height.equalTo(1)
         }
-
-        self.addSubview(decorationView)
+        
+        
         decorationView.snp_makeConstraints { (make) in
             make.left.equalTo(0)
             make.height.equalTo(17)
@@ -47,11 +58,11 @@ class BulletinBar: UIView {
             make.centerY.equalTo(self)
         }
         
-        self.addSubview(label)
+        
         label.snp_makeConstraints { (make) in
             make.centerY.equalTo(self)
             make.left.equalTo(19)
         }
     }
-
+    
 }

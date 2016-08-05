@@ -20,7 +20,7 @@ class TransitionInteractionController: UIPercentDrivenInteractiveTransition {
         self.edge = edge
         
         super.init()
-        self.gestureRecognizer.addTarget(self, action: #selector(TransitionInteractionController.gestureRecognizeDidUpdate(_:)))
+        gestureRecognizer.addTarget(self, action: #selector(TransitionInteractionController.gestureRecognizeDidUpdate(_:)))
     }
     
     override func startInteractiveTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -44,7 +44,7 @@ class TransitionInteractionController: UIPercentDrivenInteractiveTransition {
         let width = transitionContainerView?.bounds.width
         let height = transitionContainerView?.bounds.height
         
-        switch self.edge {
+        switch edge {
         case UIRectEdge.Right: return (width! - locationInSourceView.x) / width!
         case UIRectEdge.Left: return locationInSourceView.x / width!
         case UIRectEdge.Bottom: return (height! - locationInSourceView.y) / height!
@@ -57,15 +57,15 @@ class TransitionInteractionController: UIPercentDrivenInteractiveTransition {
     func gestureRecognizeDidUpdate(gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
         switch gestureRecognizer.state {
         case .Began: break
-        case .Changed: self.updateInteractiveTransition(self.percentForGesture(gestureRecognizer))  //手势滑动，更新百分比
+        case .Changed: updateInteractiveTransition(percentForGesture(gestureRecognizer))  //手势滑动，更新百分比
         case .Ended:    // 滑动结束，判断是否超过一半，如果是则完成剩下的动画，否则取消动画
-            if self.percentForGesture(gestureRecognizer) >= 0.5 {
-                self.finishInteractiveTransition()
+            if percentForGesture(gestureRecognizer) >= 0.5 {
+                finishInteractiveTransition()
             }
             else {
-                self.cancelInteractiveTransition()
+                cancelInteractiveTransition()
             }
-        default: self.cancelInteractiveTransition()
+        default: cancelInteractiveTransition()
         }
     }
 }

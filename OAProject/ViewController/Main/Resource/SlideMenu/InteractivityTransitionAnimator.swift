@@ -77,7 +77,7 @@ class InteractivityTransitionAnimator: NSObject, UIViewControllerAnimatedTransit
         
         toView?.transform = CGAffineTransformMakeTranslation(-(toView?.frame.width)!, 0)
         
-        UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: {
+        UIView.animateWithDuration(transitionDuration(transitionContext), animations: {
             toView?.transform = CGAffineTransformMakeTranslation(0, 0)
             
             fromView?.transform = fromViewTransform

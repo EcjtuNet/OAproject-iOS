@@ -96,14 +96,14 @@ class SlideMenuView: UIView {
         let rect = CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.width, height: UIScreen.mainScreen().bounds.height)
         super.init(frame: rect)
         
-        self.backgroundColor = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1.00)
+        backgroundColor = UIColor(red:0.94, green:0.94, blue:0.94, alpha:1.00)
         
-        self.addSubview(closeButton)
-        self.addSubview(logoutImageView)
-        self.addSubview(logoutButton)
-        self.addSubview(menuImageView)
-        self.addSubview(menuTableView)
-        self.addSubview(avatarImageView)
+        addSubview(closeButton)
+        addSubview(logoutImageView)
+        addSubview(logoutButton)
+        addSubview(menuImageView)
+        addSubview(menuTableView)
+        addSubview(avatarImageView)
         addSubview(profileSettingImageView)
         addSubview(nameLabel)
         addSubview(qrcodeButton)
@@ -200,7 +200,7 @@ extension SlideMenuView:UITableViewDataSource,UITableViewDelegate {
         }else {
             cell = UITableViewCell(style: .Default, reuseIdentifier: "reuseCell")
         }
-        self.setupCellData(cell!, indexPath: indexPath)
+        setupCellData(cell!, indexPath: indexPath)
         return cell!
     }
     

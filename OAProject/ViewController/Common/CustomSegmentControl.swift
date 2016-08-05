@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+//segementControl的选中状态
 enum CustomSegmentControlSelected {
     case left
     case right
@@ -77,15 +77,15 @@ class CustomSegmentControl: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addSubview(backgroudImageView)
-        self.addSubview(leftButton)
-        self.addSubview(rightButton)
+        addSubview(backgroudImageView)
+        addSubview(leftButton)
+        addSubview(rightButton)
         self.frame = backgroudImageView.frame
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        let buttonFrame = CGSize(width: self.frame.width / 2, height: self.frame.height)
+        let buttonFrame = CGSize(width: frame.width / 2, height: frame.height)
         
         leftButton.frame.origin = CGPoint(x: 0.0, y: 0.0)
         leftButton.frame.size = buttonFrame

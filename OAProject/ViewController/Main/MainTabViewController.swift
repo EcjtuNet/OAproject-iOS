@@ -28,7 +28,7 @@ class MainTabViewController: UITabBarController {
         let toolsViewController = ToolsViewController()
         animation = ToolsViewAnimation(composeButton: sender)
         toolsViewController.transitioningDelegate = animation
-        self.presentViewController(toolsViewController, animated: true, completion: nil)
+        presentViewController(toolsViewController, animated: true, completion: nil)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -46,13 +46,13 @@ class MainTabViewController: UITabBarController {
     //添加子ViewController
     private func addChildViewControllers() {
         let homeViewController = HomeViewController()
-        self.addChildViewController(homeViewController,imageName: "tabbar_home")
+        addChildViewController(homeViewController,imageName: "tabbar_home")
         
         let null = NullViewController()
-        self.addChildViewController(null)
+        addChildViewController(null)
         
         let contact = ContactTableViewController()
-        self.addChildViewController(contact,imageName: "tabbar_contact")
+        addChildViewController(contact,imageName: "tabbar_contact")
     }
     
     private func addChildViewController(childController: UIViewController,imageName:String) {

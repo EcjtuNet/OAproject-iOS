@@ -15,6 +15,9 @@
 		C01407BB1D4F48A5007709D9 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01407B51D4F48A5007709D9 /* SlideMenuViewController.swift */; };
 		C01407BC1D4F48A5007709D9 /* TransitionInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01407B61D4F48A5007709D9 /* TransitionInteractionController.swift */; };
 		C01407BE1D4F4A3E007709D9 /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01407BD1D4F4A3E007709D9 /* CustomSegmentControl.swift */; };
+		C0417D001D54414500710304 /* ToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0417CFF1D54414500710304 /* ToolsView.xib */; };
+		C0417D021D544CAA00710304 /* ToolsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417D011D544CAA00710304 /* ToolsButton.swift */; };
+		C0417D041D544CB800710304 /* ToolsButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0417D031D544CB800710304 /* ToolsButton.xib */; };
 		C0623F521D49CD92001579CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0623F511D49CD92001579CD /* AppDelegate.swift */; };
 		C0623F591D49CD92001579CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0623F581D49CD92001579CD /* Assets.xcassets */; };
 		C0623F671D49CD92001579CD /* OAProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0623F661D49CD92001579CD /* OAProjectTests.swift */; };
@@ -74,6 +77,9 @@
 		C01407B51D4F48A5007709D9 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
 		C01407B61D4F48A5007709D9 /* TransitionInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionInteractionController.swift; sourceTree = "<group>"; };
 		C01407BD1D4F4A3E007709D9 /* CustomSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
+		C0417CFF1D54414500710304 /* ToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolsView.xib; sourceTree = "<group>"; };
+		C0417D011D544CAA00710304 /* ToolsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsButton.swift; sourceTree = "<group>"; };
+		C0417D031D544CB800710304 /* ToolsButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolsButton.xib; sourceTree = "<group>"; };
 		C0623F4E1D49CD92001579CD /* OAProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0623F511D49CD92001579CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0623F581D49CD92001579CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -246,6 +252,8 @@
 				C08C0FC21D4DAA9E00D71A91 /* SlideShowView.swift */,
 				C08C0FC31D4DAA9E00D71A91 /* TitleButton.swift */,
 				C01407BD1D4F4A3E007709D9 /* CustomSegmentControl.swift */,
+				C0417D011D544CAA00710304 /* ToolsButton.swift */,
+				C0417D031D544CB800710304 /* ToolsButton.xib */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -311,6 +319,7 @@
 			children = (
 				C08C0FD71D4DAA9E00D71A91 /* ToolsViewAnimation.swift */,
 				C08C0FD81D4DAA9E00D71A91 /* ToolsViewController.swift */,
+				C0417CFF1D54414500710304 /* ToolsView.xib */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -444,10 +453,12 @@
 			files = (
 				C08C0FF71D4DAF5A00D71A91 /* DroplistView.storyboard in Resources */,
 				C0B834831D5056F600D3846F /* DroplistView.xib in Resources */,
+				C0417D001D54414500710304 /* ToolsView.xib in Resources */,
 				C0C8BE5D1D50F8BB005B944E /* DetailView.storyboard in Resources */,
 				C08C0FE11D4DAA9E00D71A91 /* NotifyTableViewCell.xib in Resources */,
 				C0C8BE581D50F52F005B944E /* DetailView.xib in Resources */,
 				C0623F591D49CD92001579CD /* Assets.xcassets in Resources */,
+				C0417D041D544CB800710304 /* ToolsButton.xib in Resources */,
 				C08C0FDF1D4DAA9E00D71A91 /* MessageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -531,6 +542,7 @@
 				C08C0FDE1D4DAA9E00D71A91 /* MessageTableViewCell.swift in Sources */,
 				C01407BC1D4F48A5007709D9 /* TransitionInteractionController.swift in Sources */,
 				C08C0FE41D4DAA9E00D71A91 /* ContactTableViewController.swift in Sources */,
+				C0417D021D544CAA00710304 /* ToolsButton.swift in Sources */,
 				C08C0FF51D4DAB3E00D71A91 /* DropListPresentationController.swift in Sources */,
 				C08C0FEF1D4DAA9E00D71A91 /* ToolsViewAnimation.swift in Sources */,
 				C01407B91D4F48A5007709D9 /* InteractivityTransitionDelegate.swift in Sources */,

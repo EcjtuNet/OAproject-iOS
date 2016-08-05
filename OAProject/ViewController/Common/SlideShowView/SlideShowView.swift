@@ -9,11 +9,15 @@
 import UIKit
 
 @objc protocol SlideShowViewViewDelegate {
+    /**监听横幅的点击事件
+     *@param:slideShowView 当前使用的SlideShowView控件
+     *@param:index 当前选中位置
+     */
     optional func slideShowView(slideShowView:SlideShowView, didSelectRowAtIndexPath index:NSIndexPath)
 }
 
 protocol SlideShowViewDataSource {
-
+    
     func slideShowView(slideShowView:SlideShowView ) -> Int
     
     func slideShowView(slideShowView:SlideShowView, itemAtIndexPath index:NSIndexPath) -> UIImage
@@ -36,7 +40,7 @@ class SlideShowView: UIView {
     
     private var numberOfItems = 3
     
-    lazy var scrollView:UIScrollView = {
+    private lazy var scrollView:UIScrollView = {
         let view = UIScrollView()
         view.delegate = self
         view.pagingEnabled = true
@@ -44,13 +48,13 @@ class SlideShowView: UIView {
         return view
     }()
     
-    lazy var indicatorBackground:UIView = {
+    private lazy var indicatorBackground:UIView = {
         let view = UIView()
         view.backgroundColor = self.indicatorBackgroundColor
         return view
     }()
     
-    lazy var indicator:UIView = {
+    private lazy var indicator:UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(red:0.15, green:0.22, blue:0.24, alpha:1.00)
         return view
@@ -58,9 +62,9 @@ class SlideShowView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.addSubview(indicatorBackground)
-        self.bringSubviewToFront(indicatorBackground)
-        self.addSubview(scrollView)
+        addSubview(indicatorBackground)
+        bringSubviewToFront(indicatorBackground)
+        addSubview(scrollView)
         indicatorBackground.addSubview(indicator)
 
     }
@@ -81,8 +85,8 @@ class SlideShowView: UIView {
         
         indicatorBackground.frame = CGRect(x: 0, y: viewHeight!-indicatorHeight, width: viewWidth!, height: indicatorHeight)
         
-        scrollView.contentSize = CGSize(width: viewWidth! * CGFloat(numberOfItems), height: self.frame.height)
-        scrollView.frame = self.frame
+        scrollView.contentSize = CGSize(width: viewWidth! * CGFloat(numberOfItems), height: frame.height)
+        scrollView.frame = frame
         
         let indicatorWidth = viewWidth! / CGFloat(numberOfItems)
         indicator.frame = CGRect(x: 0, y: 0, width: indicatorWidth, height: indicatorHeight)
@@ -90,9 +94,13 @@ class SlideShowView: UIView {
     
 //    设置每页要显示的图片
     private func setupDataSource() {
+        
         for i in 0...numberOfItems {
+            
             let imageView = UIImageView()
+            
             let indexPath = NSIndexPath(index: i)
+            
             if let image = dataSource?.slideShowView(self, itemAtIndexPath: indexPath) {
                 imageView.image = image
                 imageView.frame = CGRect(x: viewWidth! * CGFloat(i), y: 0, width: viewWidth!, height: viewHeight!)
