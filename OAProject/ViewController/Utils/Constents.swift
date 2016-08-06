@@ -8,7 +8,9 @@
 
 import UIKit
 
-class Contents {
+class Constents {
     static let ScreenWidth = UIScreen.mainScreen().bounds.width
     static let ScreenHeight = UIScreen.mainScreen().bounds.height
+    
+    static let TextColor = UIColor(red:0.33, green:0.40, blue:0.41, alpha:1.00)
 }

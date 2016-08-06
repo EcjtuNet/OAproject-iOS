@@ -20,7 +20,6 @@ class SlideMenuView: UIView {
     
     var delegate:SlideMenuDelegate?
     
-    private lazy var textColor = UIColor(red:66.0/255, green:82.0/255, blue:85.0/255, alpha:1.00)
 //MARK:懒加载
     private lazy var closeButton:UIButton = {
        let button = UIButton()
@@ -80,7 +79,7 @@ class SlideMenuView: UIView {
         let label = UILabel()
         label.font = UIFont.boldSystemFontOfSize(18)
         label.text = "姓名"
-        label.textColor = self.textColor
+        label.textColor = Constents.TextColor
         return label
     }()
     

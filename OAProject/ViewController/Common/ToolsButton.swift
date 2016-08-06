@@ -9,31 +9,40 @@
 import UIKit
 
 class ToolsButton: UIView {
-    
+
     private lazy var imageButton:UIButton = {
         let button = UIButton()
-        button.adjustsImageWhenHighlighted = true
+        button.showsTouchWhenHighlighted = true
         button.frame.size = CGSize(width: 50, height: 50)
         return button
     }()
     
     private lazy var title:UILabel = {
        let label = UILabel()
-        label.textColor = UIColor.blackColor()
+        label.textColor = Constents.TextColor
         label.font = UIFont.systemFontOfSize(14)
+        label.textAlignment = NSTextAlignment.Center
+
         return label
     }()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.frame.size = CGSize(width: 50, height: 80)
         addSubview(imageButton)
         addSubview(title)
+        
     }
     
     required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        NSBundle.mainBundle().loadNibNamed("ToolsButton", owner: self, options: nil)
+        fatalError("init(coder:) has not been implemented")
+    }
+
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        imageButton.center = CGPoint(x: self.frame.width / 2, y: 25)
+        title.frame.origin = CGPoint(x: 0, y: 66)
+        title.frame.size = CGSize(width: self.frame.width, height: 14)
     }
     
     
@@ -44,5 +53,6 @@ class ToolsButton: UIView {
     
     func setTitle(title:String) {
         self.title.text = title
+        self.title.sizeToFit()
     }
 }

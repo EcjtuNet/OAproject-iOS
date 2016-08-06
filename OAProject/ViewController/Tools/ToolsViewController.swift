@@ -10,21 +10,12 @@ import UIKit
 
 class ToolsViewController: UIViewController {
     
-    private lazy var announceButton:ToolsButton = {
-        let button = ToolsButton()
-        button.setTitle("公告")
-        button.setImage(UIImage(named: "tools_announce")!)
-        button.sizeToFit()
-        return button
-    }()
+
     
     override func loadView() {
-        super.loadView()
-        view.addSubview(announceButton)
-        announceButton.snp_makeConstraints { (make) in
-            make.top.equalTo(100)
-            make.left.equalTo(100)
-        }
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "tools_navbar_setting"), style: .Plain, target: self, action: "ASD")
+        navigationItem.title = "服务"
+        view = ToolsView()
     }
 
     override func viewDidLoad() {

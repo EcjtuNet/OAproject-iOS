@@ -18,7 +18,7 @@ class CustomSegmentControl: UIView {
     private lazy var leftSelectedImage = UIImage(named: "contact_navbar_message")
     private lazy var rightSelectedImage = UIImage(named: "contact_navbar_book")
 //    两种状态文字颜色
-    private lazy var normalTitleColor = UIColor(red: 66.0/255, green: 82.0/255, blue: 85.0/255, alpha: 1.0)
+    private lazy var normalTitleColor = Constents.TextColor
     private lazy var selectedTitleColor = UIColor.whiteColor()
 //    记录当前选择状态
     var selected = CustomSegmentControlSelected.left

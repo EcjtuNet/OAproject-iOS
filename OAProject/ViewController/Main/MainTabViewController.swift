@@ -19,15 +19,13 @@ class MainTabViewController: UITabBarController {
         return button
     }()
     
-    var animation:ToolsViewAnimation?
-    
     func composeButtonDidClick(sender:UIButton) {
         
         sender.selected = !sender.selected
-
-        let toolsViewController = ToolsViewController()
-        animation = ToolsViewAnimation(composeButton: sender)
-        toolsViewController.transitioningDelegate = animation
+        
+        let nav = UINavigationController()
+        nav.addChildViewController(ToolsViewController())
+        let toolsViewController = nav
         presentViewController(toolsViewController, animated: true, completion: nil)
     }
     
