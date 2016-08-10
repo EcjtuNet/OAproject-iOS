@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainTabViewController: UITabBarController {
+class MainTabViewController: UITabBarController,UITabBarControllerDelegate {
     
     private lazy var composeButton:UIButton = {
         let button = UIButton()
@@ -36,6 +36,7 @@ class MainTabViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addChildViewControllers()
         tabBar.barTintColor = UIColor.whiteColor()
         
@@ -70,4 +71,5 @@ class MainTabViewController: UITabBarController {
         composeButton.frame = CGRect(x: buttonWidth, y: 0, width: buttonWidth, height: 49)
         tabBar.addSubview(composeButton)
     }
+    
 }

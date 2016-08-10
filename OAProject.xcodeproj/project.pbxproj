@@ -15,7 +15,9 @@
 		C01407BB1D4F48A5007709D9 /* SlideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01407B51D4F48A5007709D9 /* SlideMenuViewController.swift */; };
 		C01407BC1D4F48A5007709D9 /* TransitionInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01407B61D4F48A5007709D9 /* TransitionInteractionController.swift */; };
 		C01407BE1D4F4A3E007709D9 /* CustomSegmentControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01407BD1D4F4A3E007709D9 /* CustomSegmentControl.swift */; };
+		C01714E91D5AC9EA007352B6 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01714E81D5AC9EA007352B6 /* LoginView.swift */; };
 		C0417D021D544CAA00710304 /* ToolsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0417D011D544CAA00710304 /* ToolsButton.swift */; };
+		C05341151D58E404001F21FC /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05341141D58E404001F21FC /* LoginViewController.swift */; };
 		C0623F521D49CD92001579CD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0623F511D49CD92001579CD /* AppDelegate.swift */; };
 		C0623F591D49CD92001579CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0623F581D49CD92001579CD /* Assets.xcassets */; };
 		C0623F671D49CD92001579CD /* OAProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0623F661D49CD92001579CD /* OAProjectTests.swift */; };
@@ -76,7 +78,9 @@
 		C01407B51D4F48A5007709D9 /* SlideMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SlideMenuViewController.swift; sourceTree = "<group>"; };
 		C01407B61D4F48A5007709D9 /* TransitionInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionInteractionController.swift; sourceTree = "<group>"; };
 		C01407BD1D4F4A3E007709D9 /* CustomSegmentControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegmentControl.swift; sourceTree = "<group>"; };
+		C01714E81D5AC9EA007352B6 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = OAProject/ViewController/Tools/LoginView.swift; sourceTree = SOURCE_ROOT; };
 		C0417D011D544CAA00710304 /* ToolsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsButton.swift; sourceTree = "<group>"; };
+		C05341141D58E404001F21FC /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = OAProject/ViewController/Tools/LoginViewController.swift; sourceTree = SOURCE_ROOT; };
 		C0623F4E1D49CD92001579CD /* OAProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OAProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0623F511D49CD92001579CD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0623F581D49CD92001579CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 		C08C0FC91D4DAA9E00D71A91 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C05341141D58E404001F21FC /* LoginViewController.swift */,
+				C01714E81D5AC9EA007352B6 /* LoginView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -540,6 +546,7 @@
 				C0417D021D544CAA00710304 /* ToolsButton.swift in Sources */,
 				C08C0FF51D4DAB3E00D71A91 /* DropListPresentationController.swift in Sources */,
 				C08C0FEF1D4DAA9E00D71A91 /* ToolsViewAnimation.swift in Sources */,
+				C05341151D58E404001F21FC /* LoginViewController.swift in Sources */,
 				C01407B91D4F48A5007709D9 /* InteractivityTransitionDelegate.swift in Sources */,
 				C08C0FE81D4DAA9E00D71A91 /* MainTabViewController.swift in Sources */,
 				C01407BE1D4F4A3E007709D9 /* CustomSegmentControl.swift in Sources */,
@@ -556,6 +563,7 @@
 				C08C0FDC1D4DAA9E00D71A91 /* DepartmentDisplayView.swift in Sources */,
 				C08C0FEB1D4DAA9E00D71A91 /* NullViewController.swift in Sources */,
 				C08C0FF11D4DAA9E00D71A91 /* Constents.swift in Sources */,
+				C01714E91D5AC9EA007352B6 /* LoginView.swift in Sources */,
 				C01407BA1D4F48A5007709D9 /* SlideMenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

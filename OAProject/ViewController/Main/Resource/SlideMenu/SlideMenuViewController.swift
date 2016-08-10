@@ -12,7 +12,6 @@ class SlideMenuViewController: UIViewController,SlideMenuDelegate {
     var slideMenuView:SlideMenuView?
     
     override func loadView() {
-        super.loadView()
         let slideMenuView = SlideMenuView()
         slideMenuView.delegate = self
         view = slideMenuView
